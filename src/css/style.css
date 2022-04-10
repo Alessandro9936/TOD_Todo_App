@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-blue: #2bceff;
+  --main-gray: #3c424a;
+  --input-gray: #272b30;
+  --light-gray: #6b7885;
+  --color-text: white;
+
+  --general-font-size: 1.4rem;
+
+  --border-radius: 4px;
+
+  --divider-border: 1.5px solid rgb(34, 31, 31);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--general-font-size);
+
+  letter-spacing: 0.1rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
+
+  background: linear-gradient(45deg, #bceaf8, #82defa);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 70%;
+  width: 30%;
+
+  padding-top: 1rem;
+
+  background-color: var(--main-gray);
+  border-radius: var(--border-radius);
+}
+
+/* Navigation Styling */
+
+.day-nav-container {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 2.4rem;
+
+  border-bottom: var(--divider-border);
+}
+
+.day-nav-list {
+  list-style: none;
+
+  display: flex;
+  gap: 5rem;
+}
+
+.day-btn {
+  color: var(--light-gray);
+
+  padding: 0.4rem;
+
+  cursor: pointer;
+}
+
+/* Add with JS when user click on nav link */
+.on-hover,
+.day-btn:hover {
+  font-weight: bold;
+
+  color: var(--color-text);
+
+  border-bottom: 3px solid var(--color-blue);
+}
+
+/* ****************** */
+
+/* Day-Date Styling */
+
+.day-date-container {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+
+  padding-block: 5rem;
+}
+
+.day-date-container svg {
+  height: 3rem;
+  width: 3rem;
+
+  color: var(--light-gray);
+
+  cursor: pointer;
+}
+
+.day-date-display {
+  text-align: center;
+}
+
+.day-date-display p {
+  font-size: 3rem;
+  font-weight: bold;
+
+  margin-bottom: 0.4rem;
+
+  color: var(--color-text);
+}
+
+.day-date-display span {
+  color: var(--light-gray);
+  font-weight: bold;
+}
+
+/* ****************** */
+
+/* Input Task Container Styling */
+.input-task-container {
+  width: 100%;
+  padding-inline: 6rem;
+
+  margin-bottom: 1.8rem;
+}
+
+.form {
+  position: relative;
+
+  z-index: 1;
+}
+
+.task-container svg {
+  position: absolute;
+
+  color: var(--light-gray);
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
+.input-style {
+  width: 100%;
+
+  outline: none;
+  border: var(--divider-border);
+  border-radius: var(--border-radius);
+
+  font-size: var(--general-font-size);
+  font-weight: bold;
+
+  color: var(--color-text);
+
+  padding: 0.8rem;
+
+  background-color: var(--input-gray);
+}
+
+.task-spec-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+
+  background-color: var(--input-gray);
+
+  height: 34rem;
+
+  padding: 2rem;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.description textarea {
+  resize: none;
+
+  width: 100%;
+
+  outline: none;
+  border: var(--divider-border);
+  border-radius: var(--border-radius);
+
+  padding: 0.8rem;
+
+  font-size: var(--general-font-size);
+  color: var(--input-gray);
+
+  background-color: var(--color-text);
+}
+
+.due-date label {
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.due-date input {
+  background-color: white;
+  border: none;
+  border-radius: var(--border-radius);
+
+  padding: 0.4rem;
+}
+
+.priority label {
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.btn-submit {
+  padding-block: 0.8rem;
+  background-color: var(--color-blue);
+  border: none;
+
+  font-size: 1.6rem;
+  color: var(--input-gray);
+  font-weight: bold;
+
+  border-radius: var(--border-radius);
+
+  cursor: pointer;
+}
+
+.btn-submit:hover,
+.btn-submit:active {
+  transform: scale(98%);
+}
+
+/* ****************** */
+
+/* Tasks Container Styling */
+.tasks-container {
+  width: 100%;
+  padding-inline: 6rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  overflow: scroll;
+}
+
+.task-visible {
+  display: flex;
+  align-items: center;
+}
+
+.task-visible button {
+  height: 1.6rem;
+  width: 1.6rem;
+
+  border: var(--divider-border);
+  border-radius: var(--border-radius);
+
+  background-color: var(--light-gray);
+
+  cursor: pointer;
+}
+
+/* Add with JS when user click btn */
+.check-btn {
+  background-color: var(--color-blue) !important;
+}
+
+.task-visible p {
+  color: var(--color-text);
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-left: 1.2rem;
+}
+
+.task-visible svg {
+  height: 3rem;
+  width: 3rem;
+
+  margin-left: auto;
+
+  color: var(--light-gray);
+
+  cursor: pointer;
+}
+
+.task-description {
+  position: relative;
+  padding-top: 1rem;
+
+  border-bottom: 2px solid #272b30;
+}
+
+.task-description strong {
+  color: var(--color-text);
+}
+
+.task-description p {
+  margin-bottom: 1rem;
+  color: var(--light-gray);
+}
+
+.task-description svg {
+  position: absolute;
+
+  height: 2.4rem;
+  width: 2.4rem;
+
+  color: var(--light-gray);
+  right: 0;
+  bottom: 5%;
+
+  cursor: pointer;
+}
+/* ****************** */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.tasks-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.tasks-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
