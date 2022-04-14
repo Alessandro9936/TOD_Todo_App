@@ -11,30 +11,17 @@
       <div class="container">
         <header class="day-nav-container">
           <ul class="day-nav-list">
-            <li class="day-btn">Day</li>
+            <li class="day-btn active">Day</li>
             <li class="day-btn">Week</li>
             <li class="day-btn">Month</li>
-            <li class="day-btn">Year</li>
           </ul>
         </header>
         <!---->
         <section class="day-date-container">
-          <svg viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"
-            />
-          </svg>
           <div class="day-date-display">
-            <p data-day>Thursday</p>
-            <span data-date>23/3/2076</span>
+            <p data-day>Today</p>
+            <span data-date>23/8/3000</span>
           </div>
-          <svg viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
-            />
-          </svg>
         </section>
         <!---->
         <section class="input-task-container">
@@ -43,84 +30,56 @@
               type="text"
               name="task-title"
               class="input-style"
-              placeholder="Add a task..."
-              data-title
+              placeholder="Task Title..."
+              id="data-title"
+              autocomplete="off"
+              maxlength="30"
             />
-<!--
-            <div class="task-spec-container">
+
+            <div class="task-spec-container hidden">
               <div class="input-field description">
                 <textarea
                   name="task-description"
                   id="description"
                   rows="5"
                   placeholder="Description...."
-                  data-description
                 ></textarea>
               </div>
               <div class="input-field due-date">
                 <label for="task-due-date">Due Date:</label>
-                <input type="date" id="task-due-date" name="task-due-date" data-due/>
+                <input type="date" id="task-due-date" name="task-due-date" />
               </div>
 
               <div class="input-field priority">
                 <input
                   type="radio"
                   name="task-priority"
+                  id="task-priority"
                   value="low"
-                  id="low-priority"
-                  data-priority="low"
                 />
                 <label for="low-priority">Low priority</label>
 
                 <input
                   type="radio"
                   name="task-priority"
+                  id="task-priority"
                   value="medium"
-                  id="medium-priority"
-                  data-priority="medium"
                 />
                 <label for="medium-priority">Med priority</label>
 
                 <input
                   type="radio"
                   name="task-priority"
+                  id="task-priority"
                   value="high"
-                  id="high-priority"
-                  data-priority="high"
                 />
                 <label for="high-priority">High priority</label>
               </div>
-              <button type="submit" class="btn-submit">Add Task</button>
+              <button type="reset" class="btn-submit">Add Task</button>
             </div>
-          -->
           </form>
         </section>
-        <section class="tasks-container">
-          <!--
-          <div class="task" data-task>
-          <div class="task-visible">
-              <button></button>
-              <p data-task-title>Buy Water</p>
-              <svg viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-                />
-              </svg>
-            </div>
-            <div class="task-description" data-task-descriptio>
-              <p><strong>Description: </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta quidem aspernatur distinctio vitae cupiditate ut temporibus ullam, doloremque totam. Et officia accusantium eos sed aliquid quaerat voluptas unde nesciunt?</p>
-              <p data-task-due><strong>Due Date: </strong>24/2/2022</p>
-              <p data-task-priority><strong>Priority: </strong>High</p>
-              <svg viewBox="0 0 24 24">
-                <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
-            </svg>
-            </div>
-          </div>
-        -->
-            </div>
-          </div>
-        </section>
+        <section class="tasks-container"></section>
       </div>
     </main>
   </body>

@@ -61,7 +61,7 @@ main {
   justify-content: center;
 
   width: 100%;
-  height: 2.4rem;
+  height: 3rem;
 
   border-bottom: var(--divider-border);
 }
@@ -75,15 +75,16 @@ main {
 
 .day-btn {
   color: var(--light-gray);
+  font-size: 1.6rem;
 
   padding: 0.4rem;
+  padding-bottom: 1.2rem;
 
   cursor: pointer;
 }
 
 /* Add with JS when user click on nav link */
-.on-hover,
-.day-btn:hover {
+.active {
   font-weight: bold;
 
   color: var(--color-text);
@@ -96,6 +97,8 @@ main {
 /* Day-Date Styling */
 
 .day-date-container {
+  height: 16rem;
+
   display: flex;
   align-items: center;
   gap: 2.4rem;
@@ -113,6 +116,7 @@ main {
 }
 
 .day-date-display {
+  max-width: 18rem;
   text-align: center;
 }
 
@@ -170,6 +174,8 @@ main {
   padding: 0.8rem;
 
   background-color: var(--input-gray);
+
+  cursor: pointer;
 }
 
 .task-spec-container {
@@ -284,6 +290,10 @@ main {
   background-color: var(--color-blue) !important;
 }
 
+.show-more {
+  display: block;
+}
+
 .task-visible p {
   color: var(--color-text);
   font-weight: bold;
@@ -291,9 +301,9 @@ main {
   margin-left: 1.2rem;
 }
 
-.task-visible svg {
-  height: 3rem;
-  width: 3rem;
+.task-visible span {
+  font-size: 2.4rem;
+  font-weight: bold;
 
   margin-left: auto;
 
@@ -309,26 +319,32 @@ main {
   border-bottom: 2px solid #272b30;
 }
 
-.task-description strong {
+.task-description p {
+  margin-bottom: 1rem;
   color: var(--color-text);
 }
 
-.task-description p {
-  margin-bottom: 1rem;
-  color: var(--light-gray);
-}
-
-.task-description svg {
+.btn-delete {
   position: absolute;
+  right: 0;
+  bottom: 10%;
+
+  display: inline-block;
 
   height: 2.4rem;
-  width: 2.4rem;
+  width: 4.8rem;
+  font-weight: bold;
+  color: var(--input-gray);
 
-  color: var(--light-gray);
-  right: 0;
-  bottom: 5%;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--color-blue);
 
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
 /* ****************** */
 
