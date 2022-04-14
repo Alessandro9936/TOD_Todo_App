@@ -65,7 +65,7 @@ export const tasksUI = (() => {
         "click",
         () =>
           (btnCheck.style.backgroundColor = "#6b7885"
-            ? (btnCheck.style.backgroundColor = "#2bceff")
+            ? (btnCheck.style.backgroundColor = "#0a9dff")
             : (btnCheck.style.backgroundColor = "#6b7885"))
       );
 

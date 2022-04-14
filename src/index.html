@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ToDo List</title>
   </head>
   <body>
     <main>
@@ -33,7 +33,7 @@
               placeholder="Task Title..."
               id="data-title"
               autocomplete="off"
-              maxlength="30"
+              maxlength="40"
             />
 
             <div class="task-spec-container hidden">
@@ -55,7 +55,7 @@
                   type="radio"
                   name="task-priority"
                   id="task-priority"
-                  value="low"
+                  value="Low"
                 />
                 <label for="low-priority">Low priority</label>
 
@@ -63,7 +63,7 @@
                   type="radio"
                   name="task-priority"
                   id="task-priority"
-                  value="medium"
+                  value="Medium"
                 />
                 <label for="medium-priority">Med priority</label>
 
@@ -71,8 +71,9 @@
                   type="radio"
                   name="task-priority"
                   id="task-priority"
-                  value="high"
+                  value="High"
                 />
+
                 <label for="high-priority">High priority</label>
               </div>
               <button type="reset" class="btn-submit">Add Task</button>
